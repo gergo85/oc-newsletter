@@ -1,0 +1,20 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: indikator.newsletter::lang.form.id
+    name: indikator.newsletter::lang.form.name
+    email: indikator.newsletter::lang.form.email
+    comment: indikator.newsletter::lang.form.comment
+    statistics: indikator.newsletter::lang.stat.mail
+    status: indikator.newsletter::lang.form.status
+    registered_at: indikator.newsletter::lang.form.registered_at
+    registered_ip: indikator.newsletter::lang.form.ip_address
+    confirmed_at: indikator.newsletter::lang.form.confirmed_at
+    confirmed_ip: indikator.newsletter::lang.form.ip_address
+    unsubscribed_at: indikator.newsletter::lang.form.unsubscribed_at
+    unsubscribed_ip: indikator.newsletter::lang.form.ip_address
+    created_at: indikator.newsletter::lang.form.created_at
+    updated_at: indikator.newsletter::lang.form.updated_at

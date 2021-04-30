@@ -1,0 +1,6 @@
+1.0.0:
+    - First version of Newsletter.
+    - create_mails_table.php
+    - create_subscribers_table.php
+    - create_logs_table.php
+    - update_timestamp_nullable.php

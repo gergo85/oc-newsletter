@@ -1,0 +1,10 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><?= e(trans('indikator.newsletter::lang.menu.logs')) ?></li>
+        <li>
+            <span class="text-info"><strong><?= Indikator\Newsletter\Models\Logs::count() ?></strong> <?= e(trans('indikator.newsletter::lang.form.logs_count')) ?></span>
+        </li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?= $this->listRender() ?>

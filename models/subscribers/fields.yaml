@@ -1,0 +1,47 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: indikator.newsletter::lang.form.name
+        attributes:
+           autofocus: ''
+        span: storm
+        cssClass: col-lg-6
+
+    email:
+        label: indikator.newsletter::lang.form.email
+        required: true
+        span: storm
+        cssClass: col-lg-6
+
+    comment:
+        label: indikator.newsletter::lang.form.comment
+        type: textarea
+        size: small
+        span: storm
+        cssClass: col-lg-12
+
+secondaryTabs:
+
+    fields:
+
+        subscriberinfo:
+            type: subscriberinfo
+            context: update
+            span: storm
+            cssClass: col-xs-12
+
+        status:
+            label: indikator.newsletter::lang.form.status
+            required: true
+            type: balloon-selector
+            options:
+                1: indikator.newsletter::lang.form.status_active
+                2: indikator.newsletter::lang.form.status_unsubscribed
+                3: indikator.newsletter::lang.form.status_pending
+            default: 1
+            span: storm
+            cssClass: col-xs-12

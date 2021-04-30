@@ -1,0 +1,3 @@
+<?php
+
+echo \Indikator\Newsletter\Models\Logs::where(['mail_id' => $record->id, 'status' => 'Viewed'])->count();

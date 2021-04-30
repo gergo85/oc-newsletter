@@ -1,0 +1,17 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: indikator.newsletter::lang.title.mails
+form: ~/plugins/indikator/newsletter/models/mails/fields.yaml
+
+modelClass: Indikator\Newsletter\Models\Mails
+defaultRedirect: indikator/newsletter/mails
+
+create:
+    redirect: indikator/newsletter/mails/update/:id
+    redirectClose: indikator/newsletter/mails
+
+update:
+    redirect: indikator/newsletter/mails/update/:id
+    redirectClose: indikator/newsletter/mails

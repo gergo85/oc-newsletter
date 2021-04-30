@@ -1,0 +1,49 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: indikator.newsletter::lang.form.title
+        required: true
+        attributes:
+           autofocus: ''
+        span: storm
+        cssClass: col-xs-12
+
+    content:
+        type: richeditor
+        size: giant
+        span: storm
+        cssClass: col-xs-12
+
+secondaryTabs:
+
+    fields:
+
+        mailinfo:
+            type: mailinfo
+            context: update
+            span: storm
+            cssClass: col-xs-12
+
+        last_send_at:
+            label: indikator.newsletter::lang.form.last_send_at
+            type: datepicker
+            readOnly: true
+            mode: datetime
+            disabled: disabeld
+            span: storm
+            cssClass: col-xs-12
+
+        status:
+            label: indikator.newsletter::lang.form.status
+            required: true
+            type: radio
+            options:
+                1: indikator.newsletter::lang.form.status_final
+                2: indikator.newsletter::lang.form.status_draft
+            default: 2
+            span: storm
+            cssClass: col-xs-6

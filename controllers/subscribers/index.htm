@@ -1,0 +1,18 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><?= e(trans('indikator.newsletter::lang.menu.subscribers')) ?></li>
+        <li>
+            <span class="text-info"><strong><?= Indikator\Newsletter\Models\Subscribers::where('status', 1)->count() ?></strong> <?= e(trans('indikator.newsletter::lang.form.status_active')) ?></span>
+            &nbsp; | &nbsp;
+            <span class="text-danger"><strong><?= Indikator\Newsletter\Models\Subscribers::where('status', 2)->count() ?></strong> <?= e(trans('indikator.newsletter::lang.form.status_unsubscribed')) ?></span>
+            &nbsp; | &nbsp;
+            <span class="text-warning"><strong><?= Indikator\Newsletter\Models\Subscribers::where('status', 3)->count() ?></strong> <?= e(trans('indikator.newsletter::lang.form.status_pending')) ?></span>
+            <?php if (Indikator\Newsletter\Models\Subscribers::where('status', 2)->count() > 0): ?>
+            &nbsp; | &nbsp;
+            <strong><?= round(Indikator\Newsletter\Models\Subscribers::where('status', 2)->count() / Indikator\Newsletter\Models\Subscribers::count() * 100, 0) ?>%</strong> <?= e(trans('indikator.newsletter::lang.stat.loss')) ?>
+            <?php endif; ?>
+        </li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?= $this->listRender() ?>

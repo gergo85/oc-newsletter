@@ -1,0 +1,55 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: indikator.newsletter::lang.form.id
+
+    mail:
+        label: indikator.newsletter::lang.form.mail
+        searchable: true
+        relation: mail
+        select: title
+
+    subscriber_name:
+        label: indikator.newsletter::lang.form.subscriber_name
+        searchable: true
+        relation: subscriber
+        select: name
+
+    subscriber_email:
+        label: indikator.newsletter::lang.form.subscriber_email
+        searchable: true
+        relation: subscriber
+        select: email
+
+    queued_at:
+        label: indikator.newsletter::lang.form.queued_at
+        invisible: true
+        searchable: true
+        type: timesince
+
+    send_at:
+        label: indikator.newsletter::lang.form.send_at
+        searchable: true
+        type: timesince
+
+    viewed_at:
+        label: indikator.newsletter::lang.form.viewed_at
+        invisible: true
+        searchable: true
+        type: timesince
+
+    clicked_at:
+        label: indikator.newsletter::lang.form.clicked_at
+        invisible: true
+        searchable: true
+        type: timesince
+
+    status:
+        label: indikator.newsletter::lang.form.status
+        sortable: false
+        type: partial
+        path: ~/plugins/indikator/newsletter/models/logs/_status.htm

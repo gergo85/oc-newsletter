@@ -1,0 +1,52 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    status_queued:
+        label: indikator.newsletter::lang.stat.queued
+        type: checkbox
+        conditions: status = 'Queued'
+
+    status_sent:
+        label: indikator.newsletter::lang.stat.sent
+        type: checkbox
+        conditions: status = 'Sent'
+
+    status_viewed:
+        label: indikator.newsletter::lang.stat.viewed
+        type: checkbox
+        conditions: status = 'Viewed'
+
+    status_clicked:
+        label: indikator.newsletter::lang.stat.clicked
+        type: checkbox
+        conditions: status = 'Clicked'
+
+    mail:
+        label: indikator.newsletter::lang.form.mail
+        modelClass: Indikator\Newsletter\Models\Mails
+        conditions: mail_id in (:filtered)
+        nameFrom: title
+
+    subscriber:
+        label: indikator.newsletter::lang.form.subscriber_email
+        modelClass: Indikator\Newsletter\Models\Subscribers
+        conditions: subscriber_id in (:filtered)
+        nameFrom: email
+
+    send_at:
+        label: indikator.newsletter::lang.form.send_at
+        type: daterange
+        conditions: send_at >= ':after' AND send_at <= ':before'
+
+    viewed_at:
+        label: indikator.newsletter::lang.form.viewed_at
+        type: daterange
+        conditions: viewed_at >= ':after' AND viewed_at <= ':before'
+
+    clicked_at:
+        label: indikator.newsletter::lang.form.clicked_at
+        type: daterange
+        conditions: clicked_at >= ':after' AND clicked_at <= ':before'

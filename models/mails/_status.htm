@@ -1,0 +1,13 @@
+<?php
+
+$text = [
+    1 => 'final',
+    2 => 'draft'
+];
+
+$class = [
+    1 => 'text-info',
+    2 => 'text-warning'
+];
+
+echo '<span class="oc-icon-circle '.$class[$record->status].'">'.Lang::get('indikator.newsletter::lang.form.status_'.$text[$record->status]).'</span>';

@@ -1,0 +1,13 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id: indikator.newsletter::lang.form.id
+    title: indikator.newsletter::lang.form.title
+    content: indikator.newsletter::lang.form.content
+    status: indikator.newsletter::lang.form.status
+    last_send_at: indikator.newsletter::lang.form.last_send_at
+    created_at: indikator.newsletter::lang.form.created_at
+    updated_at: indikator.newsletter::lang.form.updated_at

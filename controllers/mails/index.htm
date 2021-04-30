@@ -1,0 +1,12 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><?= e(trans('indikator.newsletter::lang.menu.mails')) ?></li>
+        <li>
+            <span class="text-info"><strong><?= Indikator\Newsletter\Models\Mails::where('status', 1)->count() ?></strong> <?= e(trans('indikator.newsletter::lang.form.status_final')) ?></span>
+            &nbsp; | &nbsp;
+            <span class="text-warning"><strong><?= Indikator\Newsletter\Models\Mails::where('status', 2)->count() ?></strong> <?= e(trans('indikator.newsletter::lang.form.status_draft')) ?></span>
+        </li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?= $this->listRender() ?>
