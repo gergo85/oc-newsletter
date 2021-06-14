@@ -8,7 +8,7 @@ return [
     ],
     'menu' => [
         'newsletter' => 'Newsletter',
-        'mails' => 'mails',
+        'mails' => 'Mails',
         'subscribers' => 'Subscribers',
         'import' => 'Import',
         'export' => 'Export',
