@@ -32,7 +32,7 @@ class Plugin extends PluginBase
             'newsletter' => [
                 'label'       => 'indikator.newsletter::lang.menu.newsletter',
                 'url'         => Backend::url('indikator/newsletter/mails'),
-                'icon'        => 'icon-newspaper-o',
+                'icon'        => 'icon-envelope-o',
                 'iconSvg'     => 'plugins/indikator/newsletter/assets/images/newsletter-icon.svg',
                 'permissions' => ['indikator.newsletter.*'],
                 'order'       => 820,
@@ -78,7 +78,7 @@ class Plugin extends PluginBase
                 'label'       => 'indikator.newsletter::lang.plugin.name',
                 'description' => 'indikator.newsletter::lang.backend_settings.description',
                 'category'    => 'system::lang.system.categories.cms',
-                'icon'        => 'icon-newspaper-o',
+                'icon'        => 'icon-envelope-o',
                 'class'       => 'Indikator\Newsletter\Models\Settings',
                 'order'       => 500,
                 'keywords'    => 'newsletter email statistics',
