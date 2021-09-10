@@ -2,7 +2,7 @@
     "name": "indikator/newsletter-plugin",
     "type": "october-plugin",
     "description": "Simple newsletter plugin.",
-    "homepage": "https://indikator.hu",
+    "homepage": "https://github.com/gergo85/oc-newsletter",
     "keywords": ["october", "octobercms", "newsletter"],
     "license": "MIT",
     "require": {
