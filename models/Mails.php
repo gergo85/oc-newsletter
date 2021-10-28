@@ -43,6 +43,13 @@ class Mails extends Model
         'published_at desc'
     ];
 
+    public $belongsTo = [
+        'category' => [
+            'Indikator\Newsletter\Models\Categories',
+            'order' => 'name'
+        ]
+    ];
+
     public $hasMany = [
         'logs' => [
             'Indikator\Newsletter\Models\Logs',

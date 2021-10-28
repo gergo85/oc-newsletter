@@ -15,6 +15,7 @@
 <a name="main_features"></a>
 ## Main features
 * Managing mails
+* Managing categories
 * Managing subscribers
 * Support the GDPR
 * Export & Import data
@@ -44,7 +45,7 @@ Use the __Components > News__ panel in CMS menu. At this moment there are the fo
 ## Mail template variables
 * {{ name }} - Name of subscriber
 * {{ email }} - E-mail of subscriber
-* {{ title }} - Title of post
+* {{ title }} - Title of mail
 * {{ content }} - Content of mail
 
 You can customize the layout of emails in the __Settings > Mail > Mail templates__ page.

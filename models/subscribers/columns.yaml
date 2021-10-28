@@ -16,6 +16,13 @@ columns:
         label: indikator.newsletter::lang.form.email
         searchable: true
 
+    category:
+        label: indikator.news::lang.form.category
+        sortable: false
+        invisible: true
+        type: partial
+        path: ~/plugins/indikator/newsletter/models/subscribers/_category.htm
+
     comment:
         label: indikator.newsletter::lang.form.comment
         searchable: true

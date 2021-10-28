@@ -29,6 +29,15 @@ class Subscribers extends Model
         'confirmation_hash'
     ];
 
+    public $belongsToMany = [
+        'categories' => [
+            'Indikator\Newsletter\Models\Categories',
+            'table' => 'indikator_newsletter_relations',
+            'key'   => 'subscriber_id',
+            'order' => 'name'
+        ]
+    ];
+
     public $hasMany = [
         'logs' => [
             'Indikator\Newsletter\Models\Logs',

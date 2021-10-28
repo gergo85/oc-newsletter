@@ -17,12 +17,18 @@ fields:
         span: storm
         cssClass: col-lg-6
 
+    categories:
+        label: indikator.newsletter::lang.menu.categories
+        type: relation
+        span: storm
+        cssClass: col-lg-6
+
     comment:
         label: indikator.newsletter::lang.form.comment
         type: textarea
         size: small
         span: storm
-        cssClass: col-lg-12
+        cssClass: col-lg-6
 
 secondaryTabs:
 

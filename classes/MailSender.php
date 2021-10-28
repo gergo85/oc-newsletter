@@ -7,11 +7,11 @@ use Queue;
 use Log;
 use BackendAuth;
 use Db;
-use Jenssegers\Date\Date;
 use Illuminate\Support\Collection;
 use System\Classes\PluginManager;
 use Indikator\Newsletter\Models\Logs;
 use Indikator\Newletters\Models\Mails;
+use Indikator\Newletters\Models\Categories;
 use Indikator\Newsletter\Models\Subscribers;
 
 class MailSender
@@ -70,7 +70,7 @@ class MailSender
     public function SendMailsletter()
     {
         $result = $this->sendToActiveSubscribers();
-        $this->news->last_send_at = new Date();
+        $this->news->last_send_at = now();
         $this->news->save();
 
         return $result;
@@ -82,7 +82,7 @@ class MailSender
     public function reSendMailsletter()
     {
         $result = $this->sendToActiveSubscribers();
-        $this->news->last_send_at = new Date();
+        $this->news->last_send_at = now();
         $this->news->save();
 
         return $result;
@@ -94,6 +94,10 @@ class MailSender
     protected function sendToActiveSubscribers()
     {
         $activeSubscribers = Subscribers::where('status', 1);
+
+        if ($this->news->category_id > 0) {
+            $activeSubscribers = $this->news->category->subscribers()->isSubscribed();
+        }
 
         $activeSubscribers = $activeSubscribers->get();
         $results = true;
@@ -154,7 +158,8 @@ class MailSender
             'summary'   => $this->news->introductory,
             'plaintext' => strip_tags($this->news->introductory),
             'content'   => $this->replacedContent,
-            'image'     => $this->news->image
+            'image'     => $this->news->image,
+            'category'  => $this->news->category
         ];
     }
 

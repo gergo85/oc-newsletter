@@ -12,6 +12,12 @@ columns:
         label: indikator.newsletter::lang.form.title
         searchable: true
 
+    category:
+        label: indikator.newsletter::lang.form.category
+        sortable: false
+        type: partial
+        path: ~/plugins/indikator/newsletter/models/mails/_category.htm
+
     last_send_at:
         label: indikator.newsletter::lang.form.last_send
         searchable: true

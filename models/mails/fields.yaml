@@ -10,7 +10,13 @@ fields:
         attributes:
            autofocus: ''
         span: storm
-        cssClass: col-xs-12
+        cssClass: col-md-6
+
+    category:
+        label: indikator.newsletter::lang.form.category
+        type: relation
+        span: storm
+        cssClass: col-md-6
 
     content:
         type: richeditor

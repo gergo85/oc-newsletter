@@ -1,0 +1,16 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('indikator/newsletter/categories') ?>"><?= e(trans('indikator.newsletter::lang.menu.categories')) ?></a></li>
+        <li><?= e(trans($this->pageTitle)) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<style type="text/css">
+    .control-treelist li > div.record > span {
+        font-size: 13px;
+    }
+</style>
+
+<div style="margin-left:20px;">
+    <?= $this->reorderRender() ?>
+</div>

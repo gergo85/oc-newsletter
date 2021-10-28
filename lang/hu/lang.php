@@ -9,6 +9,7 @@ return [
     'menu' => [
         'newsletter' => 'Hírlevél',
         'mails' => 'Levelek',
+        'categories' => 'Kategóriák',
         'subscribers' => 'Feliratkozók',
         'import' => 'Importálás',
         'export' => 'Exportálás',
@@ -17,11 +18,13 @@ return [
     ],
     'title' => [
         'mails' => 'levél',
+        'categories' => 'kategória',
         'subscribers' => 'feliratkozó',
         'statistics' => 'Statisztika'
     ],
     'new' => [
         'mails' => 'Új levél',
+        'categories' => 'Új kategória',
         'subscribers' => 'Új feliratkozó'
     ],
     'stat' => [
@@ -50,6 +53,7 @@ return [
         'updated_at' => 'Módosítva',
         // Bejegyzések
         'title' => 'Cím',
+        'category' => 'Kategória',
         'content' => 'Tartalom',
         'status' => 'Státusz',
         'status_final' => 'Végleges',
@@ -66,6 +70,12 @@ return [
         'length' => 'Hossz',
         'clone_of' => 'Másolat',
         'mail_cloning' => 'Levél másolása :name',
+        // Kategóriák
+        'image' => 'Kép',
+        'slug' => 'Webcím',
+        'hidden' => 'Rejtett',
+        'yes' => 'Igen',
+        'no' => 'Nem',
         // Feliratkozók
         'name' => 'Név',
         'email' => 'E-mail',
@@ -91,6 +101,7 @@ return [
         'deactivate' => 'Rejtés',
         'active' => 'Aktív',
         'inactive' => 'Inaktív',
+        'reorder' => 'Rendezés',
         'import' => 'Importálás',
         'export' => 'Exportálás',
         'unsubscribe' => 'Leiratkozás',
@@ -144,6 +155,7 @@ return [
         'show_active' => 'Aktívak mutatása',
         'show_inactive' => 'Inaktívak mutatása',
         'show_draft' => 'Piszkozatok mutatása',
+        'show_category' => 'Kategória mutatása',
         'show_piece' => 'Bejegyzések száma',
         'show_rank' => 'Helyezés mutatása',
         'show_date' => 'Dátum mutatása',
@@ -152,11 +164,13 @@ return [
         'total' => 'Összes'
     ],
     'component' => [
+        'categories' => 'Hír kategóriák',
         'subscribe' => 'Űrlap feliratkozáshoz',
         'unsubscribe' => 'Űrlap leiratkozáshoz'
     ],
     'permission' => [
         'mails' => 'Levelek kezelése',
+        'categories' => 'Kategóriák kezelése',
         'subscribers' => 'Feliratkozók kezelése',
         'statistics' => 'Statisztika megtekintése',
         'import_export' => 'Importálás és exportálás',

@@ -45,26 +45,33 @@ class Plugin extends PluginBase
                         'permissions' => ['indikator.newsletter.mails'],
                         'order'       => 100
                     ],
+                    'categories' => [
+                        'label'       => 'indikator.newsletter::lang.menu.categories',
+                        'url'         => Backend::url('indikator/newsletter/categories'),
+                        'icon'        => 'icon-tags',
+                        'permissions' => ['indikator.newsletter.categories'],
+                        'order'       => 200
+                    ],
                     'subscribers' => [
                         'label'       => 'indikator.newsletter::lang.menu.subscribers',
                         'url'         => Backend::url('indikator/newsletter/subscribers'),
                         'icon'        => 'icon-user',
                         'permissions' => ['indikator.newsletter.subscribers'],
-                        'order'       => 200
+                        'order'       => 300
                     ],
                     'logs' => [
                         'label'       => 'indikator.newsletter::lang.menu.logs',
                         'url'         => Backend::url('indikator/newsletter/logs'),
                         'icon'        => 'icon-bar-chart',
                         'permissions' => ['indikator.newsletter.logs'],
-                        'order'       => 300
+                        'order'       => 400
                     ],
                     'settings' => [
                         'label'       => 'indikator.newsletter::lang.menu.settings',
                         'url'         => Backend::url('system/settings/update/indikator/newsletter/settings'),
                         'icon'        => 'icon-cogs',
                         'permissions' => ['indikator.newsletter.settings'],
-                        'order'       => 400
+                        'order'       => 500
                     ]
                 ]
             ]
@@ -111,6 +118,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
+            'Indikator\Newsletter\Components\Categories'  => 'newsCategories',
             'Indikator\Newsletter\Components\Subscribe'   => 'newsSubscribe',
             'Indikator\Newsletter\Components\Unsubscribe' => 'newsUnsubscribe'
         ];
@@ -122,6 +130,10 @@ class Plugin extends PluginBase
             'Indikator\Newsletter\FormWidgets\MailInfo' => [
                 'label' => 'MailInfo',
                 'code'  => 'mailinfo'
+            ],
+            'Indikator\Newsletter\FormWidgets\CategoryInfo' => [
+                'label' => 'CategoryInfo',
+                'code'  => 'categoryinfo'
             ],
             'Indikator\Newsletter\FormWidgets\SubscriberInfo' => [
                 'label' => 'SubscriberInfo',
@@ -145,6 +157,12 @@ class Plugin extends PluginBase
                 'tab'   => 'indikator.newsletter::lang.menu.newsletter',
                 'label' => 'indikator.newsletter::lang.permission.mails',
                 'order' => 100,
+                'roles' => ['publisher']
+            ],
+            'indikator.newsletter.categories' => [
+                'tab'   => 'indikator.newsletter::lang.menu.newsletter',
+                'label' => 'indikator.newsletter::lang.permission.categories',
+                'order' => 200,
                 'roles' => ['publisher']
             ],
             'indikator.newsletter.subscribers' => [

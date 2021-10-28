@@ -9,6 +9,7 @@ return [
     'menu' => [
         'newsletter' => 'Newsletter',
         'mails' => 'Mails',
+        'categories' => 'Categories',
         'subscribers' => 'Subscribers',
         'import' => 'Import',
         'export' => 'Export',
@@ -17,11 +18,13 @@ return [
     ],
     'title' => [
         'mails' => 'mail',
+        'categories' => 'category',
         'subscribers' => 'subscriber',
         'statistics' => 'Statistics'
     ],
     'new' => [
         'mails' => 'New mail',
+        'categories' => 'New category',
         'subscribers' => 'New subscriber'
     ],
     'stat' => [
@@ -48,8 +51,9 @@ return [
         'id' => 'ID',
         'created_at' => 'Created at',
         'updated_at' => 'Updated at',
-        // Posts
+        // Mails
         'title' => 'Title',
+        'category' => 'Category',
         'content' => 'Content',
         'status' => 'Status',
         'status_final' => 'Final',
@@ -66,6 +70,12 @@ return [
         'length' => 'Length',
         'clone_of' => 'Clone of',
         'mail_cloning' => 'Cloning mail :name',
+        // Categories
+        'image' => 'Image',
+        'slug' => 'Slug',
+        'hidden' => 'Hidden',
+        'yes' => 'Yes',
+        'no' => 'No',
         // Subscribers
         'name' => 'Name',
         'email' => 'E-mail',
@@ -91,6 +101,7 @@ return [
         'deactivate' => 'Hide',
         'active' => 'Active',
         'inactive' => 'Inactive',
+        'reorder' => 'Reorder',
         'import' => 'Import',
         'export' => 'Export',
         'unsubscribe' => 'Unsubscribe',
@@ -144,6 +155,7 @@ return [
         'show_active' => 'Show active',
         'show_inactive' => 'Show inactive',
         'show_draft' => 'Show draft',
+        'show_category' => 'Show category',
         'show_piece' => 'Number of mails',
         'show_date' => 'Show date',
         'show_rank' => 'Show rank',
@@ -152,11 +164,13 @@ return [
         'total' => 'Total'
     ],
     'component' => [
+        'categories' => 'Categories',
         'subscribe' => 'Subscriber form',
         'unsubscribe' => 'Unsubscribe form'
     ],
     'permission' => [
         'mails' => 'Manage mails',
+        'categories' => 'Manage categories',
         'subscribers' => 'Manage subscribers',
         'statistics' => 'View statistics',
         'import_export' => 'Import and Export',

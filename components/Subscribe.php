@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Indikator\Newsletter\Classes\SubscriberService;
+use Indikator\News\Models\Categories;
 use Indikator\Newsletter\Models\Subscribers;
 use Lang;
 use App;
@@ -23,9 +24,14 @@ class Subscribe extends ComponentBase
 
     public function onRun()
     {
+        $category = Categories::where(['status' => 1, 'hidden' => 2]);
+        $this->page['category_list']  = $category->get()->all();
+        $this->page['category_count'] = $category->count();
+
         $this->page['text_messages'] = Lang::get('indikator.newsletter::lang.messages.subscribed');
         $this->page['text_name']     = Lang::get('indikator.newsletter::lang.form.name');
         $this->page['text_email']    = Lang::get('indikator.newsletter::lang.form.email');
+        $this->page['text_category'] = Lang::get('indikator.newsletter::lang.form.category');
         $this->page['text_button']   = Lang::get('indikator.newsletter::lang.button.subscribe');
     }
 
@@ -48,6 +54,7 @@ class Subscribe extends ComponentBase
         // Get input data
         $name  = post('name');
         $email = post('email');
+        $categories = post('category', []);
 
         // Looking for existing subscriber
         $subscriberResult = Subscribers::email($email);
