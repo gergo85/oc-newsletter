@@ -1,6 +1,5 @@
 <?php namespace Indikator\Newsletter\Classes;
 
-use Hash;
 use Backend;
 use Mail;
 

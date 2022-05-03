@@ -1,8 +1,6 @@
 <?php namespace Indikator\Newsletter\Classes;
 
 use October\Rain\Mail\Mailable;
-use App;
-use File;
 
 class ConfirmationMail extends Mailable
 {
